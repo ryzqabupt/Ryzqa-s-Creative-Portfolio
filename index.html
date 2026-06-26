@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryzqa's Creative Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-code"></i> Ryzqa
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#profile" class="nav-link">Profile</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#pricelist" class="nav-link">Pricelist</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HOME SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Hi, I'm Ryzqa 👋</h1>
+            <p class="hero-subtitle">Creative Developer | UI/UX Enthusiast | Web Designer</p>
+            <p class="hero-description">Transforming ideas into stunning interactive digital experiences</p>
+            <button class="btn btn-primary" onclick="scrollTo('contact')">Get In Touch</button>
+            <button class="btn btn-secondary" onclick="scrollTo('portfolio')">View My Work</button>
+        </div>
+        <div class="hero-animation">
+            <div class="floating-box"></div>
+            <div class="floating-circle"></div>
+        </div>
+    </section>
+
+    <!-- PROFILE SECTION -->
+    <section id="profile" class="profile-section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="profile-grid">
+                <div class="profile-image-container">
+                    <div class="profile-image">
+                        <div class="placeholder-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-content">
+                    <h3>Ryzqa Bupt</h3>
+                    <p class="bio">
+                        Saya adalah seorang creative developer yang passionate dalam menciptakan website interaktif dan user-friendly. 
+                        Dengan fokus pada design modern dan functionality yang solid, saya telah membantu berbagai klien mewujudkan visi digital mereka.
+                    </p>
+                    <p class="bio">
+                        Spesialisasi saya meliputi frontend development, UI/UX design, dan interactive web experiences yang membuat pengguna terpesona.
+                    </p>
+                    <div class="skills">
+                        <h4>Skills & Expertise</h4>
+                        <div class="skill-item">
+                            <span>HTML/CSS/JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>React & Next.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>UI/UX Design</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Responsive Design</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Animation & Effects</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <h2 class="section-title">My Work</h2>
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="app">App</button>
+            </div>
+            <div class="portfolio-grid" id="portfolioGrid">
+                <!-- Portfolio items akan di-generate oleh JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICELIST SECTION -->
+    <section id="pricelist" class="pricelist-section">
+        <div class="container">
+            <h2 class="section-title">Pricing & Consultation</h2>
+            <p class="section-subtitle">Pilih paket yang sesuai dengan kebutuhan Anda</p>
+            <div class="price-grid" id="priceGrid">
+                <!-- Price cards akan di-generate oleh JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Mari kita ciptakan sesuatu yang luar biasa bersama</p>
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <input type="text" placeholder="Your Name" required class="form-input">
+                        <input type="email" placeholder="Your Email" required class="form-input">
+                        <input type="text" placeholder="Subject" required class="form-input">
+                        <textarea placeholder="Your Message" required class="form-input" rows="5"></textarea>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>📍 Location</h4>
+                            <p>Jakarta, Indonesia</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>📞 Phone</h4>
+                            <p>+62 812 3456 7890</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>✉️ Email</h4>
+                            <p>hello@ryzqa.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>🕐 Available</h4>
+                            <p>Monday - Friday, 9AM - 6PM</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-btn" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-btn" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-btn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Ryzqa's Creative Portfolio. Made with <i class="fas fa-heart"></i> by Ryzqa</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
